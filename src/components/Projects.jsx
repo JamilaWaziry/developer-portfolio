@@ -1,9 +1,10 @@
 import "../styles/projects.css";
+import photo3 from "../assets/photo3.jpg";
 
 const projects = [
   {
     name: "Personal Website",
-    image: "/assets/photo3.jpg",
+    image: photo3,
     description: "A personal website built with HTML, and CSS.",
     link: "#",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -11,7 +12,7 @@ const projects = [
   },
   {
     name: "Movie Theater App",
-    image: "/assets/photo4.jpg",
+    image: photo3,
     description: "A simple movie theater app.",
     link: "#",
     tech: ["HTML", "CSS"],
