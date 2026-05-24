@@ -5,7 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import profilePic from "./assets/photo1.jpg";
-import "./styles/global.css";
+import "./Styles/global.css";
 
 export default function App() {
   return (
