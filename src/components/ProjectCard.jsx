@@ -1,7 +1,7 @@
 function ProjectCard({ project }) {
   return (
     <div className="project-card">
-      {project.featured && <span className="featured">Featured</span>}
+      {/* {project.featured && <span className="featured">Featured</span>} */}
 
       <img src={project.image} alt={project.name} />
 
