@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../Styles/header.css";
+import "../styles/header.css";
 import codePic from "../assets/photo3.jpg";
 
 export default function Header({ message }) {

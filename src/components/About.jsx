@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../Styles/about.css";
+import "../styles/about.css";
 
 export default function About() {
   const hobbies = ["Coding", "Reading", "Fitness", "Movies"];

@@ -1,4 +1,4 @@
-import "../Styles/profile.css";
+import "../styles/profile.css";
 
 export default function Profile({ photo, title, bio }) {
   return (
