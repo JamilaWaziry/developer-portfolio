@@ -1,0 +1,47 @@
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #060c0c;
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.header .quote {
+  color: #4fa3f7;
+  font-style: italic;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+  color: antiquewhite;
+}
+.intro-text h1 {
+  font-size: 2rem;
+}
+.intro-text p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: antiquewhite;
+  font-style: italic;
+}
+.intro-image img {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+
+.quote {
+  margin-top: 2rem;
+  color: #6a96c1;
+  font-style: italic;
+}

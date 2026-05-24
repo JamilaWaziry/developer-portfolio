@@ -1,0 +1,23 @@
+.about {
+  text-align: center;
+  padding: 2rem;
+}
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+.about li {
+  color: #444;
+}
+.about button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #4fa3f7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.about button:hover {
+  background: #357ac9;
+}
