@@ -1,19 +1,297 @@
 .profile {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 4rem auto;
   padding: 2rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+  color: white;
 }
-.profile img {
+
+.profile-left {
+  flex: 1;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-pic {
   width: 120px;
   height: 120px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.08);
 }
-.profile h2 {
-  margin-top: 1rem;
+
+.profile-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+  color: white;
 }
-.profile p {
-  max-width: 400px;
-  text-align: center;
-  color: #555;
+
+.profile-text p {
+  font-size: 1rem;
+  color: #c6c2c2;
+  max-width: 420px;
+  text-align: justify;
+}
+
+.profile-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  inset: 55px;
+  border-radius: 50%;
+
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.react-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  color: #61dbfb;
+  transform: translate(-50%, -50%);
+  animation: spin 8s linear infinite;
+  z-index: 5;
+}
+
+.big-icon {
+  position: absolute;
+  font-size: 54px;
+  z-index: 5;
+  transition: 0.3s ease;
+}
+
+.big-icon:hover {
+  transform: scale(1.12);
+}
+
+.js-icon {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f7df1e;
+}
+
+.node-icon {
+  top: 90px;
+  right: 45px;
+  color: #68a063;
+}
+
+.github-icon {
+  bottom: 90px;
+  right: 45px;
+  color: white;
+}
+
+.html-icon {
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e34c26;
+}
+
+.css-icon {
+  bottom: 90px;
+  left: 45px;
+  color: #264de4;
+}
+
+.python-icon {
+  top: 90px;
+  left: 45px;
+  color: #3776ab;
+}
+
+.small-icon {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 24px;
+  z-index: 5;
+  animation: float 4s ease-in-out infinite;
+}
+
+.symbol1 {
+  top: 90px;
+  left: 195px;
+}
+
+.symbol2 {
+  top: 155px;
+  left: 105px;
+}
+
+.symbol3 {
+  top: 155px;
+  right: 105px;
+}
+
+.symbol4 {
+  bottom: 155px;
+  right: 105px;
+}
+
+.symbol5 {
+  bottom: 90px;
+  left: 198px;
+}
+
+.symbol6 {
+  bottom: 155px;
+  left: 105px;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+  }
+
+  .profile-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .profile-text p {
+    font-size: 1rem;
+  }
+
+  .circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .circle::before {
+    inset: 40px;
+  }
+
+  .react-center {
+    font-size: 58px;
+  }
+
+  .big-icon {
+    font-size: 42px;
+  }
+
+  .js-icon {
+    top: 20px;
+  }
+
+  .node-icon {
+    top: 65px;
+    right: 30px;
+  }
+
+  .github-icon {
+    bottom: 65px;
+    right: 30px;
+  }
+
+  .html-icon {
+    bottom: 20px;
+  }
+
+  .css-icon {
+    bottom: 65px;
+    left: 30px;
+  }
+
+  .python-icon {
+    top: 65px;
+    left: 30px;
+  }
+
+  .small-icon {
+    font-size: 18px;
+  }
+
+  .symbol1 {
+    top: 65px;
+    left: 145px;
+  }
+
+  .symbol2 {
+    top: 120px;
+    left: 70px;
+  }
+
+  .symbol3 {
+    top: 120px;
+    right: 70px;
+  }
+
+  .symbol4 {
+    bottom: 120px;
+    right: 70px;
+  }
+
+  .symbol5 {
+    bottom: 65px;
+    left: 148px;
+  }
+
+  .symbol6 {
+    bottom: 120px;
+    left: 70px;
+  }
 }
