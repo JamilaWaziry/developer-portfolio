@@ -1,23 +1,202 @@
 .about {
-  text-align: center;
+  max-width: 1200px;
+  margin: 5rem auto;
   padding: 2rem;
 }
-.about ul {
-  list-style: none;
+
+.about-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.goal-card {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.goal-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.goal-card p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.show-btn {
+  background: transparent;
+  border: none;
+  color: #60a5fa;
+  cursor: pointer;
+  font-size: 1rem;
   padding: 0;
 }
-.about li {
-  color: #444;
+
+.show-btn:hover {
+  text-decoration: underline;
 }
-.about button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #4fa3f7;
+
+.about-intro {
+  flex: 1.5;
+}
+
+.about-intro h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: #60a5fa;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #2563eb;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
-.about button:hover {
-  background: #357ac9;
+
+.resume-btn:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-reactions {
+  position: relative;
+  text-align: center;
+  margin-bottom: 4rem;
+  min-height: 220px;
+}
+
+.portfolio-reactions h3 {
+  margin-bottom: 1rem;
+}
+
+.reaction-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.reaction-buttons button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reaction-buttons button:hover {
+  transform: scale(1.15);
+}
+
+.reaction-display {
+  min-height: 40px;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.floating-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floating-emoji {
+  position: absolute;
+  bottom: 30px;
+  font-size: 2rem;
+  animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-250px) scale(1.5);
+  }
+}
+
+.hobbies-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.hobby-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+}
+
+.hobby-card span {
+  font-size: 2.2rem;
+}
+
+.hobby-card h4 {
+  margin: 10px 0;
+}
+
+.hobby-card p {
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .hobbies-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hobbies-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro h3 {
+    font-size: 2rem;
+  }
+
+  .about-title {
+    font-size: 2.3rem;
+  }
 }

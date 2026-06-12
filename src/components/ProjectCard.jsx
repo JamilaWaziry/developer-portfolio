@@ -1,7 +1,11 @@
+import { useState } from "react";
+
 function ProjectCard({ project }) {
+  const [showDetails, setShowDetails] = useState(false);
+
   return (
-    <div className="project-card">
-      {/* {project.featured && <span className="featured">Featured</span>} */}
+    <div className="card">
+      {project.featured && <span className="featured-badge">🌟 Featured</span>}
 
       <img src={project.image} alt={project.name} />
 
@@ -9,17 +13,35 @@ function ProjectCard({ project }) {
 
       <p>{project.description}</p>
 
-      <a href={project.link} target="_blank">
-        View Project
-      </a>
-
-      <div className="tech-stack">
-        {project.techStack.map((tech, index) => (
-          <span key={index} className="badge">
+      <div className="tech">
+        {project.tech.map((tech, index) => (
+          <span key={index} className="tech-badge">
             {tech}
           </span>
         ))}
       </div>
+
+      <button
+        className="details-btn"
+        onClick={() => setShowDetails(!showDetails)}
+      >
+        {showDetails ? "Hide Details" : "View Details"}
+      </button>
+
+      {showDetails && (
+        <div className="details">
+          <p>{project.details}</p>
+        </div>
+      )}
+
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+        className="project-link"
+      >
+        View Project
+      </a>
     </div>
   );
 }

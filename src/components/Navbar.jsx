@@ -1,6 +1,6 @@
 import "../styles/navbar.css";
 
-export default function Navbar() {
+export default function Navbar({ theme, toggleTheme }) {
   return (
     <nav className="navbar">
       <h2>Jamila Waziry.</h2>
@@ -11,6 +11,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <button onClick={toggleTheme}>Theme: {theme}</button>
     </nav>
   );
 }
