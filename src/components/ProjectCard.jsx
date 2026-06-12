@@ -1,7 +1,7 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function ProjectCard({ project }) {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails] = useState(false);
 
   return (
     <div className="card">
@@ -21,12 +21,9 @@ function ProjectCard({ project }) {
         ))}
       </div>
 
-      <button
-        className="details-btn"
-        onClick={() => setShowDetails(!showDetails)}
-      >
-        {showDetails ? "Hide Details" : "View Details"}
-      </button>
+      <Link to={`/projects/${project.id}`} className="details-btn">
+        Open Project
+      </Link>
 
       {showDetails && (
         <div className="details">
