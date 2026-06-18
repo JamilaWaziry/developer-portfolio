@@ -16,8 +16,11 @@ const projects = [
     details:
       "Built using HTML and CSS with a fully responsive layout. The project includes a custom image gallery, skill section, education timeline, experience cards, and a contact section.",
     link: "https://jamilawaziry.github.io/Personal_Website/",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS"],
     featured: true,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -29,8 +32,11 @@ const projects = [
     details:
       "Designed a responsive movie theater website featuring movie cards, show schedules, and booking-inspired layouts.",
     link: "https://jamilawaziry.github.io/Movie-Theater-Web-Page/",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS"],
     featured: false,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -42,8 +48,11 @@ const projects = [
     details:
       "Built using HTML, CSS, and JavaScript. Demonstrates DOM manipulation and responsive UI design.",
     link: "https://jamilawaziry.github.io/School-Portal/",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS", "JavaScript"],
     featured: false,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -55,8 +64,11 @@ const projects = [
     details:
       "Allows users to generate professional invoices and calculate totals automatically.",
     link: "https://jamilawaziry.github.io/freelance-invoice-app/",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS", "JavaScript"],
     featured: true,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -68,8 +80,11 @@ const projects = [
     details:
       "Built using Angular, Spring Boot, PostgreSQL, and Bootstrap. Supports student and academic management.",
     link: "#",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["Angular", "Spring Boot", "PostgreSQL", "Bootstrap"],
     featured: true,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -81,8 +96,11 @@ const projects = [
     details:
       "Users can create, edit, complete, and delete tasks using JavaScript.",
     link: "https://jamilawaziry.github.io/Todo-List/",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS", "JavaScript"],
     featured: false,
+    status: "Completed",
+    progress: 100,
   },
 
   {
@@ -94,8 +112,11 @@ const projects = [
     details:
       "Uses JavaScript Date APIs to calculate age in years, months, and days.",
     link: "#",
+    codeLink: "https://github.com/yourusername/Personal_Website",
     tech: ["HTML", "CSS", "JavaScript"],
     featured: false,
+    status: "Completed",
+    progress: 100,
   },
 ];
 export default projects;

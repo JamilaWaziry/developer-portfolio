@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "../styles/header.css";
-import codePic from "../assets/photo3.jpg";
 
 export default function Header({ message }) {
   const [quote, setQuote] = useState(null);
@@ -45,15 +44,60 @@ export default function Header({ message }) {
   return (
     <header className="header">
       <div className="intro">
-        <div className="intro-image">
-          <img src={codePic} alt="code" />
+        <div className="intro-text">
+          <span className="hello">Hello! I'm</span>
+
+          <h1>
+            Jamila <span>Waziry</span>
+          </h1>
+
+          <h3>Frontend Developer</h3>
+
+          <p>
+            Building elegant solutions to complex problems with modern
+            technologies.
+          </p>
+
+          <div className="buttons">
+            <button className="primary-btn">Contact Me</button>
+
+            <button className="secondary-btn">View Projects</button>
+          </div>
+
+          <div className="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
+          </div>
         </div>
 
-        <div className="intro-text">
-          <h1>&lt; Hello, I am Jamila! &gt;</h1>
-          <h1>&lt; I design and develop</h1>
-          <h1>web applications. &gt;</h1>
-          <p>{message}</p>
+        <div className="code-card">
+          <div className="code-header">
+            <span className="header-circle red"></span>
+            <span className="header-circle yellow"></span>
+            <span className="header-circle green"></span>
+            <span className="file-name">developer.js</span>
+          </div>
+          <pre className="code-content">
+            <span className="comment">// Developer</span>
+            {"\n"}
+            <span className="keyword">const</span>{" "}
+            <span className="variable">developer</span> ={" {"}
+            {"\n"}
+            &nbsp;&nbsp;<span className="property">name</span>:{" "}
+            <span className="string">"Jamila Waziry"</span>,{"\n"}
+            &nbsp;&nbsp;<span className="property">skills</span>: [
+            <span className="string">"React"</span>,{" "}
+            <span className="string">"JavaScript"</span>,{" "}
+            <span className="string">"Java"</span>],{"\n"}
+            &nbsp;&nbsp;<span className="property">focuses</span>: [
+            <span className="string">"Responsive Design"</span>,{" "}
+            <span className="string">"UI/UX"</span>],{"\n"}
+            &nbsp;&nbsp;<span className="property">learning</span>:{" "}
+            <span className="string">"Always"</span>
+            {"\n"}
+            {"}"};
+          </pre>
         </div>
       </div>
 

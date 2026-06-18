@@ -119,81 +119,86 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact-section">
-      <h2>Contact Me</h2>
+    <div className="page">
+      <section className="contact-section">
+        <h2>Contact Me</h2>
 
-      {hasDraft && (
-        <div className="draft-message">
-          📌 You have unsent message data saved.
-        </div>
-      )}
-
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-
-        {errors.name && <p className="error">{errors.name}</p>}
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {emailHint && (
-          <p
-            className={
-              emailHint.includes("Valid") ? "email-success" : "email-warning"
-            }
-          >
-            {emailHint}
-          </p>
+        {hasDraft && (
+          <div className="draft-message">
+            📌 You have unsent message data saved.
+          </div>
         )}
 
-        {errors.email && <p className="error">{errors.email}</p>}
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
 
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-        />
+          {errors.name && <p className="error">{errors.name}</p>}
 
-        {errors.message && <p className="error">{errors.message}</p>}
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {emailHint && (
+            <p
+              className={
+                emailHint.includes("Valid") ? "email-success" : "email-warning"
+              }
+            >
+              {emailHint}
+            </p>
+          )}
 
-        <button type="submit">Send Message</button>
-      </form>
+          {errors.email && <p className="error">{errors.email}</p>}
 
-      <div className="preview-card">
-        <h3>✨ Live Preview</h3>
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+          />
 
-        <p>
-          <strong>Name:</strong> {formData.name || "Your name will appear here"}
-        </p>
+          {errors.message && <p className="error">{errors.message}</p>}
 
-        <p>
-          <strong>Email:</strong>{" "}
-          {formData.email || "Your email will appear here"}
-        </p>
+          <button type="submit">Send Message</button>
+        </form>
 
-        <div className="preview-message">
-          <strong>Message:</strong>
+        <div className="preview-card">
+          <h3>✨ Live Preview</h3>
 
           <p>
-            {formData.message ||
-              "Start typing your message to see a live preview..."}
+            <strong>Name:</strong>{" "}
+            {formData.name || "Your name will appear here"}
           </p>
-        </div>
-      </div>
 
-      {showToast && <div className="toast">✅ Message sent successfully!</div>}
-    </section>
+          <p>
+            <strong>Email:</strong>{" "}
+            {formData.email || "Your email will appear here"}
+          </p>
+
+          <div className="preview-message">
+            <strong>Message:</strong>
+
+            <p>
+              {formData.message ||
+                "Start typing your message to see a live preview..."}
+            </p>
+          </div>
+        </div>
+
+        {showToast && (
+          <div className="toast">✅ Message sent successfully!</div>
+        )}
+      </section>
+    </div>
   );
 }

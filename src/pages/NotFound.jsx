@@ -1,6 +1,7 @@
 export default function NotFound() {
   return (
     <div
+      className="page"
       style={{
         textAlign: "center",
         padding: "100px 20px",

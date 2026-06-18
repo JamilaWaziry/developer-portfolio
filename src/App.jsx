@@ -10,33 +10,14 @@ import ProjectDetails from "./pages/ProjectDetails";
 
 import FeedbackWall from "./components/FeedbackWall";
 
-import "./styles/global.css";
-
-import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
+import "./styles/global.css";
+
 export default function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-
-    document.body.className = theme;
-  }, [theme]);
-
-  const themes = ["dark", "light", "ocean"];
-
-  const toggleTheme = () => {
-    const currentIndex = themes.indexOf(theme);
-
-    const nextIndex = (currentIndex + 1) % themes.length;
-
-    setTheme(themes[nextIndex]);
-  };
-
   return (
     <div>
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -54,7 +35,9 @@ export default function App() {
             </>
           }
         />
+
         <Route path="/projects/:id" element={<ProjectDetails />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
 
