@@ -114,7 +114,7 @@
 .action-section {
   display: inline-flex;
   flex-direction: column;
-  align-items: center; /* Centers icons relative to buttons */
+  align-items: center;
   margin-top: 25px;
 }
 
@@ -126,7 +126,7 @@
 .socials {
   display: flex;
   gap: 18px;
-  margin-top: 24px; /* Space between buttons and icons */
+  margin-top: 24px;
 }
 
 .socials a {
@@ -330,6 +330,7 @@
     width: 100%;
     min-width: 0;
     max-width: 600px;
+    text-align: left;
   }
 
   .code-content {
@@ -337,6 +338,9 @@
     line-height: 1.5;
     padding: 18px;
     overflow-x: auto;
+
+    text-align: left;
+    direction: ltr;
   }
 }
 @media (max-width: 480px) {

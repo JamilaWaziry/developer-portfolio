@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useAppContext } from "../context/AppContext";
 
 import "../styles/navbar.css";
-
+import { FiSun, FiMoon } from "react-icons/fi";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,7 +11,9 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2>Jamila Waziry.</h2>
+      <NavLink to="/" className="logo">
+        Jamila <span>Waziry</span>.
+      </NavLink>
 
       <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
@@ -43,8 +45,13 @@ export default function Navbar() {
         </li>
 
         <li>
-          <button type="button" onClick={toggleTheme}>
-            Theme: {theme}
+          <button
+            className="theme-btn"
+            type="button"
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? <FiSun /> : <FiMoon />}
           </button>
         </li>
       </ul>
