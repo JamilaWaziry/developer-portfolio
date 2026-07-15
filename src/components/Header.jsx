@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "../styles/header.css";
+import Typed from "typed.js";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Header({ message }) {
   const [quote, setQuote] = useState(null);
+  const typingRef = useRef(null);
 
   useEffect(() => {
     const fetchQuote = async () => {
@@ -41,33 +45,54 @@ export default function Header({ message }) {
     fetchQuote();
   }, []);
 
+  useEffect(() => {
+    const typed = new Typed(typingRef.current, {
+      strings: ["Hello I'am ,"],
+      typeSpeed: 70,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true,
+    });
+
+    return () => typed.destroy();
+  }, []);
+
   return (
     <header className="header">
       <div className="intro">
         <div className="intro-text">
-          <span className="hello">Hello! I'm</span>
+          <span className="hello" ref={typingRef}></span>
 
           <h1>
             Jamila <span>Waziry</span>
           </h1>
-
-          <h3>Frontend Developer</h3>
 
           <p>
             Building elegant solutions to complex problems with modern
             technologies.
           </p>
 
-          <div className="buttons">
-            <button className="primary-btn">Contact Me</button>
+          <div className="action-section">
+            <div className="buttons">
+              <Link to="/contact" className="primary-btn">
+                Let's Talk
+              </Link>
+              <Link to="/projects" className="secondary-btn">
+                View Projects
+              </Link>
+            </div>
 
-            <button className="secondary-btn">View Projects</button>
-          </div>
-
-          <div className="socials">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Email</a>
+            <div className="socials">
+              <a href="#">
+                <FaGithub />
+              </a>
+              <a href="#">
+                <FaLinkedin />
+              </a>
+              <a href="mailto:you@example.com">
+                <FaEnvelope />
+              </a>
+            </div>
           </div>
         </div>
 
